@@ -289,14 +289,7 @@ const Transaction = {
 const account = {
   balance: 0,
   transactions: [],
-/*
-* {
-*  id: string,
-*  date: DATA, 
-*  amount: number,
-*  type: 'deposit' | 'withdraw'
-* }
-*/
+
   createTransaction(amount, type) {
     return {
     id: (this.transactions.length + 1).toString(),
@@ -347,16 +340,90 @@ const account = {
 }
 
 
-account.deposit(1000);
+account.deposit(5000);
 
 console.log(account.getBalance);
 
-account.withdraw(750);
+account.withdraw(1500);
 
 console.log(account.getBalance());
 
-account.withdraw(750);
+account.withdraw(1500);
+console.log(account.getBalance);
+
+account.deposit(500);
+console.log(account.getBalance());
+
+account.withdraw(2000);
 
 console.log(account.getBalance());
 
-console.log(account.getTransactionDetails('2'));
+console.log(account.getTransactionDetails('3'));
+
+
+
+
+function calcAverageCalories (days){
+  let calories = 0;
+  for(let day of days) {
+    calories += day.calories;
+  }
+  if(days.length === 0) {
+    return 0
+  }
+  return calories / days.length
+}
+
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 2040 },
+    { day: "tuesday", calories: 2270 },
+    { day: "wednesday", calories: 2420 },
+    { day: "thursday", calories: 1900 },
+    { day: "friday", calories: 2370 },
+    { day: "saturday", calories: 2280 },
+    { day: "sunday", calories: 2610 }
+  ])
+); // 2270
+
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 3010 },
+    { day: "tuesday", calories: 3200 },
+    { day: "wednesday", calories: 3120 },
+    { day: "thursday", calories: 2900 },
+    { day: "friday", calories: 3450 },
+    { day: "saturday", calories: 3280 },
+    { day: "sunday", calories: 3300 }
+  ])
+); // 3180
+
+console.log(
+  calcAverageCalories([])
+); // 0
+
+const profile = {
+  username: "Jacob",
+playTime: 300,
+
+changeUsername(newName) {
+  this.username = newName;
+},
+
+updatePlayTime(hours) {
+  this.playTime += hours;
+},
+
+getInfo() {
+  return `${this.username} has ${this.playTime} active hours!`
+}
+};
+
+
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+profile.changeUsername("Marco");
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); 
