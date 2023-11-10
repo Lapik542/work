@@ -281,84 +281,84 @@
 
 
 
-const Transaction = {
-  DEPOSIT: 'deposit',
-  WITHDRAW: 'withdraw',
-};
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
 
-const account = {
-  balance: 0,
-  transactions: [],
+// const account = {
+//   balance: 0,
+//   transactions: [],
 
-  createTransaction(amount, type) {
-    return {
-    id: (this.transactions.length + 1).toString(),
-    amount,
-    type,
-    };
-  },
+//   createTransaction(amount, type) {
+//     return {
+//     id: (this.transactions.length + 1).toString(),
+//     amount,
+//     type,
+//     };
+//   },
 
-  deposit(amount) {
-    this.balance += amount;
+//   deposit(amount) {
+//     this.balance += amount;
 
-    const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
+//     const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
 
-    this.transactions.push(newTransaction);
-  },
+//     this.transactions.push(newTransaction);
+//   },
 
-  withdraw(amount) {
-    if(amount > this.balance) {
-      console.error('You dont have enough money');
-      return
-    }
-    this.balance -= amount;
+//   withdraw(amount) {
+//     if(amount > this.balance) {
+//       console.error('You dont have enough money');
+//       return
+//     }
+//     this.balance -= amount;
 
-    const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//     const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
 
-    this.transactions.push(newTransaction);
-  },
+//     this.transactions.push(newTransaction);
+//   },
 
-  getBalance() {
-    return this.balance;
-  },
+//   getBalance() {
+//     return this.balance;
+//   },
 
-  getTransactionDetails(id) {
-    for (const transaction of this.transactions) {
-      if(transaction.id === id) return transaction
-    }
+//   getTransactionDetails(id) {
+//     for (const transaction of this.transactions) {
+//       if(transaction.id === id) return transaction
+//     }
 
-    console.warn('You dont have transaction with id:' + id);
-  },
+//     console.warn('You dont have transaction with id:' + id);
+//   },
 
-  getTransactionTotal(type) {
-    let totalAmount = 0;
+//   getTransactionTotal(type) {
+//     let totalAmount = 0;
 
-    for (const transaction of this.transactions) {
-      if (transaction.type === type) totalAmount += transaction.amount;
-    }
-  }
-}
+//     for (const transaction of this.transactions) {
+//       if (transaction.type === type) totalAmount += transaction.amount;
+//     }
+//   }
+// }
 
 
-account.deposit(5000);
+// account.deposit(5000);
 
-console.log(account.getBalance);
+// console.log(account.getBalance);
 
-account.withdraw(1500);
+// account.withdraw(1500);
 
-console.log(account.getBalance());
+// console.log(account.getBalance());
 
-account.withdraw(1500);
-console.log(account.getBalance);
+// account.withdraw(1500);
+// console.log(account.getBalance);
 
-account.deposit(500);
-console.log(account.getBalance());
+// account.deposit(500);
+// console.log(account.getBalance());
 
-account.withdraw(2000);
+// account.withdraw(2000);
 
-console.log(account.getBalance());
+// console.log(account.getBalance());
 
-console.log(account.getTransactionDetails('3'));
+// console.log(account.getTransactionDetails('3'));
 
 
 
