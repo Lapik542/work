@@ -1,0 +1,362 @@
+// function checkStorage(available, ordered) {
+//   if (available > ordered) {
+//     return "Not enough goods in stock!";
+//   } else {
+//       return "Order is processed, our manager will contact you";
+//   }
+// }
+// console.log(checkStorage(100, 50)); 
+// console.log(checkStorage(100, 130)); 
+// console.log(checkStorage(200, 20)); 
+// console.log(checkStorage(200, 150)); 
+// console.log(checkStorage(150, 180));
+
+// function toggleModalVisibility(isVisible) {
+//   if (!isVisible === true) {
+//     console.log(true);
+//   } else if (isVisible === true) {
+//     console.log(false);
+//   }
+//   return isVisible
+// }
+// toggleModalVisibility(true)
+// toggleModalVisibility(false)
+
+
+// function toggleModalVisibility(isVisible) {
+//   return !isVisible;
+// }
+// console.log(toggleModalVisibility(true));
+// console.log(toggleModalVisibility(false)); 
+
+// function getSubstring(string, length) {
+//   // Перевіряємо, чи довжина не більше за довжину рядка
+//   if (length <= string.length) {
+//       // Використовуємо метод `slice`, щоб витягнути частину рядка
+//       return string.slice(0, length);
+//   } else {
+//       // Якщо довжина більше за розмір рядка, повертаємо весь рядок
+//       return string;
+//   }
+// }
+// console.log(getSubstring("Hello world", 3));  // "Hel"
+// console.log(getSubstring("Hello world", 5));  // "Hello"
+// console.log(getSubstring("Hello world", 8));  // "Hello wo"
+// console.log(getSubstring("Hello world", 11)); // "Hello world"
+// console.log(getSubstring("Hello world", 0));  // ""
+
+
+// function normalizeInput(input, to) {
+//   if (input = input.toLowerCase()) {
+//     console.log(input.toUpperCase()); 
+//   } else {
+//     console.log(input.toLowerCase()); 
+//   }
+// }
+// normalizeInput("This ISN'T SpaM", "lower") // "this isn't spam"
+// normalizeInput("This ISN'T SpaM", "upper") // "THIS ISN'T SPAM"
+// normalizeInput("Big SALE", "lower") // "big sale"
+// normalizeInput("Big SALE", "upper") // "BIG SALE"
+// normalizeInput("Stay Awhile and Listen", "lower") // "stay awhile and listen"
+// normalizeInput("Stay Awhile and Listen", "upper") // "STAY AWHILE AND LISTEN"
+
+
+// function normalizeInput(input, to) {
+//   input ? input.toLowerCase : input.toUpperCase;
+// }
+// normalizeInput("This ISN'T SpaM", "lower") 
+// normalizeInput("This ISN'T SpaM", "upper") 
+// normalizeInput("Big SALE", "lower") 
+// normalizeInput("Big SALE", "upper") 
+// normalizeInput("Stay Awhile and Listen", "lower") 
+// normalizeInput("Stay Awhile and Listen", "upper") 
+
+// const courseTopic = "JavaScript essentials";
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[12];
+// console.log(lastElement);
+
+
+// function getOrderQuantity(order) {
+//     console.log(order.length);
+//   }
+// getOrderQuantity(["apple", "peach", "pear", "banana"]) 
+// getOrderQuantity(["apple", "banana"]) 
+// getOrderQuantity(["apple", "banana", "pear"]) 
+// getOrderQuantity([]) 
+  
+// function getLastElementMeta(array) {
+//   return  [array.length - 1, array[array.length - 1]]; 
+// }
+// getLastElementMeta(["apple", "peach", "pear", "banana"]) // [3, "banana"]
+// getLastElementMeta(["apple", "peach", "pear"]) // [2, "pear"]
+// getLastElementMeta(["apple", "peach"]) // [1, "peach"]
+// getLastElementMeta(["apple"]) // [0, "apple"]
+
+// let a = 5;
+
+// let b = a;
+// console.log(a); // 5
+// console.log(b); // 5
+// // Присвоєння за значенням, у пам'яті буде створено ще
+// // одну ячейку, в яку буде скопійовано значення 5
+
+// // Змінимо значення a
+// a = 10;
+// console.log(a); // 10
+// console.log(b); // 5 Значення b не змінилося, оскільки це окрема копія
+
+
+// function calculateEvenTotal(number) {
+//   let total = 0;
+//   for (let i = 1; i <= number; i++) {
+//     if (i % 2 === 0) { // Перевіряємо, чи число парне
+//       total += i; // Додаємо парне число до суми
+//     }
+//   }
+//   return total;
+// }
+// console.log(calculateEvenTotal(1));
+// console.log(calculateEvenTotal(3));
+// console.log(calculateEvenTotal(7));
+// console.log(calculateEvenTotal(18));
+// console.log(calculateEvenTotal(27));
+
+
+// const userLength = 60;
+
+// for (let i = 1; i <= userLength; i++) {
+//   console.log('User' + ' ' + i);
+// }
+// console.log('Length User Num');
+
+
+// function num(number) {
+//   let sum = 0
+//   for (let i = 0; i <= number; i += 1) {
+//     if (i % 2 === 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
+
+// const start = 6;
+// const end = 17;
+// let number;
+// for (let i = 0; i <= start; i += 1) {
+//   if (i % 5 === 0) {
+//     sum += i
+//   }
+// }
+
+
+// const start = 6;
+// const end = 17;
+// let number;
+// for (number = start; number <= end; number += 1) {
+//   if (number % 5 === 0) {
+//     break;
+//   }
+// }
+
+// function findNumberFromFive(max, target) {
+// 	console.log("Log in the body of the function before the cycle");
+
+//   for (let i = 5; i <= max; i += 1) {
+//     console.log("Current counter value i:", i);
+
+//     if (i === target) {
+//       console.log(`Found the number ${target}, interrupt the cycle`);
+//     }
+//   }
+
+//   console.log("Log in body function after cycle");
+// }
+
+// findNumberFromFive(10, 6);
+// console.log("Log after exiting function");
+
+// function findNumber(start, end, divisor) {
+//   for (let number = start; number <= end; number++) {
+//     if (number % divisor === 0) {
+//       return number;
+//     }
+//   }
+// }
+// console.log(findNumber(2, 6, 5));
+// console.log(findNumber(8, 17, 3));
+// console.log(findNumber(6, 9, 4));
+// console.log(findNumber(16, 35, 7));
+
+// let res = 0;
+// for (let i = 0; i < 10; i += 1) {
+//     if (i % 2 === 0) {
+//       continue;
+//     } else if (i > 8) {
+//       break;
+//     }
+//     res += i;
+// }
+// console.log(res);
+
+// const n = 100;
+// for (let i = 1; i <= n; i += 1) {
+//   console.log(i);
+// }
+
+// const n = 0;
+// for (let i = 100; i > n; i -= 1) {
+//   console.log(i);
+// }
+
+// const n = 100;
+// for (let i = 0; i <= n; i += 2) {
+//   console.log(i);
+// }
+
+// const a = 0;
+// const b = 20;
+
+// let res = 0;
+// for (let i = a; i <= b; i++) {
+//   if (i % 5 === 0) {
+//     console.log(i);
+//     res += i;
+//   }
+// }
+// console.log(res);
+
+// const min = 0;
+// const max = 5;
+// let sum = 0;
+// for (let i = min; i <= max; i++) {
+//   if (i % 2 === 1) {
+//     console.log(i);
+//     sum += i;
+//   }
+// }
+// console.log(sum);
+
+
+// function findNumber(start, end, divisor) {
+
+//   for (let i = start; start <= end; i++) {
+//     if (i % divisor === 0) {
+//       return i;
+//     }
+//   }
+// }
+  
+// console.log(findNumber(2, 6, 5));
+// console.log(findNumber(8, 17, 3));
+// console.log(findNumber(6, 9, 4));
+// console.log(findNumber(16, 35, 7));
+
+
+
+// function calculateDeposit(amount, percent, period) {
+//   let sum = amount;
+
+//   for (let i = 0; i < period; i++) {
+//     sum += sum * (percent / 100);
+//   }
+//   return Math.round(sum * 100) / 100;
+// }
+// const deposit = calculateDeposit(1000000, 8, 3)
+
+// console.log(deposit);
+
+
+
+
+
+
+
+
+
+
+
+
+
+const Transaction = {
+  DEPOSIT: 'deposit',
+  WITHDRAW: 'withdraw',
+};
+
+const account = {
+  balance: 0,
+  transactions: [],
+/*
+* {
+*  id: string,
+*  date: DATA, 
+*  amount: number,
+*  type: 'deposit' | 'withdraw'
+* }
+*/
+  createTransaction(amount, type) {
+    return {
+    id: (this.transactions.length + 1).toString(),
+    amount,
+    type,
+    };
+  },
+
+  deposit(amount) {
+    this.balance += amount;
+
+    const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
+
+    this.transactions.push(newTransaction);
+  },
+
+  withdraw(amount) {
+    if(amount > this.balance) {
+      console.error('You dont have enough money');
+      return
+    }
+    this.balance -= amount;
+
+    const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
+
+    this.transactions.push(newTransaction);
+  },
+
+  getBalance() {
+    return this.balance;
+  },
+
+  getTransactionDetails(id) {
+    for (const transaction of this.transactions) {
+      if(transaction.id === id) return transaction
+    }
+
+    console.warn('You dont have transaction with id:' + id);
+  },
+
+  getTransactionTotal(type) {
+    let totalAmount = 0;
+
+    for (const transaction of this.transactions) {
+      if (transaction.type === type) totalAmount += transaction.amount;
+    }
+  }
+}
+
+
+account.deposit(1000);
+
+console.log(account.getBalance);
+
+account.withdraw(750);
+
+console.log(account.getBalance());
+
+account.withdraw(750);
+
+console.log(account.getBalance());
+
+console.log(account.getTransactionDetails('2'));
