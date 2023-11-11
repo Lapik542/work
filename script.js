@@ -402,6 +402,8 @@
 //   calcAverageCalories([])
 // ); // 0
 
+
+
 // const profile = {
 //   username: "Jacob",
 // playTime: 300,
