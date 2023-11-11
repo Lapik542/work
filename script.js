@@ -430,31 +430,47 @@
 // profile.updatePlayTime(20);
 // console.log(profile.getInfo());
 
-const user = {
-   name: 'Alex',
-   vip: true,
-}
+// const user = {
+//    name: 'Alex',
+//    vip: true,
+// }
 
-function getUserBonus(user, onSuccess, onReject) {
-   const bonus = {
-      id: 'wepr-2344-sdfs-2348-wsdv',
-      name: 'Welcome Bonus',
-      monye: 2000,
+// function getUserBonus(user, onSuccess, onReject) {
+//    const bonus = {
+//       id: 'wepr-2344-sdfs-2348-wsdv',
+//       name: 'Welcome Bonus',
+//       monye: 2000,
+//    }
+
+//    if (user.vip) {
+//       onSuccess(bonus);
+//    } else {
+//       onReject(null)
+//    }
+// }
+
+// function handleSuccess(bonus) {
+//    console.log(bonus);
+// }
+
+// function handleError() {
+//    console.error('Some error, try again later');
+// }
+
+// getUserBonus(user, handleSuccess, handleError);
+
+function each(array, callback) {
+   const newArray = [];
+
+   for (const element of array) {
+      const result = callback(element);
+      newArray.push(result);
    }
-
-   if (user.vip) {
-      onSuccess(bonus);
-   } else {
-      onReject(null)
-   }
+   return newArray;
 }
 
-function handleSuccess(bonus) {
-   console.log(bonus);
-}
-
-function handleError() {
-   console.error('Some error, try again later');
-}
-
-getUserBonus(user, handleSuccess, handleError);
+console.log(
+   each([12, 33, 44, 72, 18], function (value) {
+      return value * 2;
+   })
+);
