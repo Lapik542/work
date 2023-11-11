@@ -5,10 +5,10 @@
 //       return "Order is processed, our manager will contact you";
 //   }
 // }
-// console.log(checkStorage(100, 50)); 
-// console.log(checkStorage(100, 130)); 
-// console.log(checkStorage(200, 20)); 
-// console.log(checkStorage(200, 150)); 
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 150));
 // console.log(checkStorage(150, 180));
 
 // function toggleModalVisibility(isVisible) {
@@ -27,7 +27,7 @@
 //   return !isVisible;
 // }
 // console.log(toggleModalVisibility(true));
-// console.log(toggleModalVisibility(false)); 
+// console.log(toggleModalVisibility(false));
 
 // function getSubstring(string, length) {
 //   // Перевіряємо, чи довжина не більше за довжину рядка
@@ -48,9 +48,9 @@
 
 // function normalizeInput(input, to) {
 //   if (input = input.toLowerCase()) {
-//     console.log(input.toUpperCase()); 
+//     console.log(input.toUpperCase());
 //   } else {
-//     console.log(input.toLowerCase()); 
+//     console.log(input.toLowerCase());
 //   }
 // }
 // normalizeInput("This ISN'T SpaM", "lower") // "this isn't spam"
@@ -64,12 +64,12 @@
 // function normalizeInput(input, to) {
 //   input ? input.toLowerCase : input.toUpperCase;
 // }
-// normalizeInput("This ISN'T SpaM", "lower") 
-// normalizeInput("This ISN'T SpaM", "upper") 
-// normalizeInput("Big SALE", "lower") 
-// normalizeInput("Big SALE", "upper") 
-// normalizeInput("Stay Awhile and Listen", "lower") 
-// normalizeInput("Stay Awhile and Listen", "upper") 
+// normalizeInput("This ISN'T SpaM", "lower")
+// normalizeInput("This ISN'T SpaM", "upper")
+// normalizeInput("Big SALE", "lower")
+// normalizeInput("Big SALE", "upper")
+// normalizeInput("Stay Awhile and Listen", "lower")
+// normalizeInput("Stay Awhile and Listen", "upper")
 
 // const courseTopic = "JavaScript essentials";
 
@@ -82,13 +82,13 @@
 // function getOrderQuantity(order) {
 //     console.log(order.length);
 //   }
-// getOrderQuantity(["apple", "peach", "pear", "banana"]) 
-// getOrderQuantity(["apple", "banana"]) 
-// getOrderQuantity(["apple", "banana", "pear"]) 
-// getOrderQuantity([]) 
+// getOrderQuantity(["apple", "peach", "pear", "banana"])
+// getOrderQuantity(["apple", "banana"])
+// getOrderQuantity(["apple", "banana", "pear"])
+// getOrderQuantity([])
   
 // function getLastElementMeta(array) {
-//   return  [array.length - 1, array[array.length - 1]]; 
+//   return  [array.length - 1, array[array.length - 1]];
 // }
 // getLastElementMeta(["apple", "peach", "pear", "banana"]) // [3, "banana"]
 // getLastElementMeta(["apple", "peach", "pear"]) // [2, "pear"]
@@ -363,67 +363,96 @@
 
 
 
-function calcAverageCalories (days){
-  let calories = 0;
-  for(let day of days) {
-    calories += day.calories;
-  }
-  if(days.length === 0) {
-    return 0
-  }
-  return calories / days.length
+// function calcAverageCalories (days){
+//   let calories = 0;
+//   for(let day of days) {
+//     calories += day.calories;
+//   }
+//   if(days.length === 0) {
+//     return 0
+//   }
+//   return calories / days.length
+// }
+
+// console.log(
+//   calcAverageCalories([
+//     { day: "monday", calories: 2040 },
+//     { day: "tuesday", calories: 2270 },
+//     { day: "wednesday", calories: 2420 },
+//     { day: "thursday", calories: 1900 },
+//     { day: "friday", calories: 2370 },
+//     { day: "saturday", calories: 2280 },
+//     { day: "sunday", calories: 2610 }
+//   ])
+// ); // 2270
+
+// console.log(
+//   calcAverageCalories([
+//     { day: "monday", calories: 3010 },
+//     { day: "tuesday", calories: 3200 },
+//     { day: "wednesday", calories: 3120 },
+//     { day: "thursday", calories: 2900 },
+//     { day: "friday", calories: 3450 },
+//     { day: "saturday", calories: 3280 },
+//     { day: "sunday", calories: 3300 }
+//   ])
+// ); // 3180
+
+// console.log(
+//   calcAverageCalories([])
+// ); // 0
+
+// const profile = {
+//   username: "Jacob",
+// playTime: 300,
+
+// changeUsername(newName) {
+//   this.username = newName;
+// },
+
+// updatePlayTime(hours) {
+//   this.playTime += hours;
+// },
+
+// getInfo() {
+//   return `${this.username} has ${this.playTime} active hours!`
+// }
+// };
+
+
+// console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+// profile.changeUsername("Marco");
+// console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+// profile.updatePlayTime(20);
+// console.log(profile.getInfo());
+
+const user = {
+   name: 'Alex',
+   vip: true,
 }
 
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 2040 },
-    { day: "tuesday", calories: 2270 },
-    { day: "wednesday", calories: 2420 },
-    { day: "thursday", calories: 1900 },
-    { day: "friday", calories: 2370 },
-    { day: "saturday", calories: 2280 },
-    { day: "sunday", calories: 2610 }
-  ])
-); // 2270
+function getUserBonus(user, onSuccess, onReject) {
+   const bonus = {
+      id: 'wepr-2344-sdfs-2348-wsdv',
+      name: 'Welcome Bonus',
+      monye: 2000,
+   }
 
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 3010 },
-    { day: "tuesday", calories: 3200 },
-    { day: "wednesday", calories: 3120 },
-    { day: "thursday", calories: 2900 },
-    { day: "friday", calories: 3450 },
-    { day: "saturday", calories: 3280 },
-    { day: "sunday", calories: 3300 }
-  ])
-); // 3180
-
-console.log(
-  calcAverageCalories([])
-); // 0
-
-const profile = {
-  username: "Jacob",
-playTime: 300,
-
-changeUsername(newName) {
-  this.username = newName;
-},
-
-updatePlayTime(hours) {
-  this.playTime += hours;
-},
-
-getInfo() {
-  return `${this.username} has ${this.playTime} active hours!`
+   if (user.vip) {
+      onSuccess(bonus);
+   } else {
+      onReject(null)
+   }
 }
-};
 
+function handleSuccess(bonus) {
+   console.log(bonus);
+}
 
-console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+function handleError() {
+   console.error('Some error, try again later');
+}
 
-profile.changeUsername("Marco");
-console.log(profile.getInfo()); // "Marco has 300 active hours!"
-
-profile.updatePlayTime(20);
-console.log(profile.getInfo()); 
+getUserBonus(user, handleSuccess, handleError);
