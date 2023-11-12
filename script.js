@@ -459,18 +459,155 @@
 
 // getUserBonus(user, handleSuccess, handleError);
 
-function each(array, callback) {
-   const newArray = [];
+// function each(array, callback) {
+//    const newArray = [];
 
-   for (const element of array) {
-      const result = callback(element);
-      newArray.push(result);
-   }
-   return newArray;
-}
+//    for (const element of array) {
+//       const result = callback(element);
+//       newArray.push(result);
+//    }
+//    return newArray;
+// }
 
-console.log(
-   each([12, 33, 44, 72, 18], function (value) {
-      return value * 2;
-   })
-);
+// console.log(
+//    each([12, 33, 44, 72, 18], function (value) {
+//       return value * 2;
+//    })
+// );
+
+
+// //  USER__VIP
+
+// const user = {
+//    name: 'Alex',
+//    type: 'admin',
+//    age: 16,
+//    vip: true,
+// }
+
+// function clickOnBonus(user, onSuccess, onSuccessForAdmin, onReject, onRejectForAdmin) {
+//    const bonus = {
+//       id: '12-34-56-78',
+//       name: 'Super Bonus!',
+//       money: 2000,
+//    }
+
+//    if (user.vip && user.age >= 16) {
+//       onSuccess(bonus)
+//    } else {
+//       onReject(null)
+//    }
+
+//       if (user.type === 'admin') {
+//       onSuccessForAdmin(bonus)
+//    } else {
+//       onRejectForAdmin(null)
+//    }
+// }
+
+// function handleSuccess(bonus) {
+//    console.log(bonus);
+// }
+
+// function handleSuccessForAdmin(bonus) {
+//    console.log(bonus);
+// }
+
+// function handleReject() {
+//    console.error('Some error, try again later');
+// }
+
+// function handleRejectForAdmin() {
+//    console.error('You not admin! Some error, try again later');
+// }
+
+// clickOnBonus(user, handleSuccess, handleSuccessForAdmin, handleReject, handleRejectForAdmin);
+
+// // CALLBACK
+
+// function callback() {
+//    console.log('Hello world');
+// }
+
+// function saySomething(onSomething) {
+//    onSomething()
+// }
+
+// saySomething(callback)
+
+
+// // BUTTON
+
+
+// const button = {
+//     listeners: [],
+
+//    click() {
+//       for (const listener of this.listeners) {
+//          listener();
+//       }
+//    },
+
+//    addListener(callback) {
+//       this.listeners.push(callback)
+//    }
+// }
+
+// function onClick() {
+//    console.log('Click 1');
+// }
+
+// function onClick2() {
+//    console.log('Click 2');
+// }
+
+// button.addListener(onClick)
+// button.addListener(onClick2)
+
+// button.click();
+
+// ADD
+
+// function handleAdd(result) {
+//    console.error(result);
+// }
+
+// function handleAdd2(result) {
+//    console.log(result);
+// }
+
+// function add(a, b, callback) {
+//    callback(a + b)
+// }
+
+// add(2, 3, handleAdd)
+
+// add(8, 10, handleAdd2)
+
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
+
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+
+// function makeMessage(pizzaName, callback) {
+//   return callback(pizzaName);
+// }
+
+// EACH
+
+// function each(array, callback) {
+//    const newArray = [];
+
+//    for (const element of array) {
+//       const result = callback(element)
+//       newArray.push(result);
+//    }
+
+//    return newArray;
+// }
+// console.log(each([64, 49, 36, 25, 16], function (value) {
+//    return value * 2;
+// }));
