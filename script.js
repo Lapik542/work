@@ -498,7 +498,7 @@
 //       onReject(null)
 //    }
 
-//       if (user.type === 'admin') {
+//    if (user.type === 'admin') {
 //       onSuccessForAdmin(bonus)
 //    } else {
 //       onRejectForAdmin(null)
@@ -611,3 +611,38 @@
 // console.log(each([64, 49, 36, 25, 16], function (value) {
 //    return value * 2;
 // }));
+
+// // ADMIN_CALLBACK
+
+
+// function addMessage(result) {
+//    console.error(result);
+// }
+
+// function addMessage2(result) {
+//    console.warn(result);
+// }
+
+// function addListener(a, d, callback) {
+//    callback(a + d)
+// }
+
+// addListener('You not ' ,'Admin!', addMessage);
+// addListener('You not ', 'Admin!', addMessage2);
+
+
+// function each(array, callback) {
+//    const newArray = [];
+
+//    for (element of array) {
+//       const result = callback(element)
+//       newArray.push(result)
+//    }
+//    return newArray;
+// }
+
+// console.log(
+//    each([64, 49, 36, 25, 16], function (value) {
+//    return value * 2;
+//    })
+// );
