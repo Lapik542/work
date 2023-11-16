@@ -646,3 +646,43 @@
 //    return value * 2;
 //    })
 // );
+
+
+// const number = [5, 10, 15, 20, 25, 30];
+
+// let total = 0;
+
+// number.forEach((value) => {
+//     total += value;
+// })
+
+// console.log(total);
+
+
+// const addNumber = (...argu) => {
+//     let total = 0;
+     
+//     argu.forEach((number) => total += number)
+
+//     return total / argu.length;
+// }
+
+// console.log(addNumber(12,3,5,7,1,4));
+// console.log(addNumber(10,10,10,10));
+
+
+const allCar = [
+    { make: 'Toyota', amount: 12, price: 25141 },
+    { make: 'BMW', amount: 12, price: 32141 },
+    { make: 'Mercedes', amount: 12, price: 15141 },
+    { make: 'Ford', amount: 12, price: 75141 },
+];
+
+const result = allCar.map((car, i) => {
+    return {
+        ...car,
+        make: car.make === 'Toyota' || car.make === 'Ford' ? car.make = 'Jiga' : car.make
+    }
+});
+
+console.log(result);
