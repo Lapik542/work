@@ -671,18 +671,32 @@
 // console.log(addNumber(10,10,10,10));
 
 
-const allCar = [
-    { make: 'Toyota', amount: 12, price: 25141 },
-    { make: 'BMW', amount: 12, price: 32141 },
-    { make: 'Mercedes', amount: 12, price: 15141 },
-    { make: 'Ford', amount: 12, price: 75141 },
+// const allCar = [
+//     { make: 'Toyota', amount: 12, price: 25141 },
+//     { make: 'BMW', amount: 12, price: 32141 },
+//     { make: 'Mercedes', amount: 12, price: 15141 },
+//     { make: 'Ford', amount: 12, price: 75141 },
+// ];
+
+// // const result = allCar.map((car, i) => {
+// //     return {
+// //         ...car,
+// //         make: car.make === 'Toyota' || car.make === 'Ford' ? car.make = 'Jiga' : car.make
+// //     }
+// // });
+
+// const make = allCar.flatMap(make => make.make)
+// console.log(make);
+// // console.log(result);
+
+
+const users = [
+    { id: 1, online: true},
+    { id: 1, online: false},
+    { id: 1, online: true},
 ];
 
-const result = allCar.map((car, i) => {
-    return {
-        ...car,
-        make: car.make === 'Toyota' || car.make === 'Ford' ? car.make = 'Jiga' : car.make
-    }
-});
+const result = users.filter((user) => user.online);
 
 console.log(result);
+
