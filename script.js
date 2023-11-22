@@ -652,20 +652,44 @@
 //   console.log(`${greeting}, ${this.name}!`);
 // }
 
-// const user = {
-//   name: "Alice"
-// };
+// const number = [5, 10, 15, 20, 25, 30];
 
-// const greet = sayHello.bind(user);
+// let total = 0;
 
-// greet("Hello");
+// number.forEach((value) => {
+//     total += value;
+// })
+
+// console.log(total);
 
 
-const animal = {
-  legs: 4,
-};
+// const addNumber = (...argu) => {
+//     let total = 0;
+     
+//     argu.forEach((number) => total += number)
 
-const dog = Object.create(animal);
-dog.name = "Mango";
+//     return total / argu.length;
+// }
 
-console.log(dog); // { name: "Mango", [[Prototype]]: animal }
+// console.log(addNumber(12,3,5,7,1,4));
+// console.log(addNumber(10,10,10,10));
+
+
+// const allCar = [
+//     { make: 'Toyota', amount: 12, price: 25141 },
+//     { make: 'BMW', amount: 12, price: 32141 },
+//     { make: 'Mercedes', amount: 12, price: 15141 },
+//     { make: 'Ford', amount: 12, price: 75141 },
+// ];
+
+// // const result = allCar.map((car, i) => {
+// //     return {
+// //         ...car,
+// //         make: car.make === 'Toyota' || car.make === 'Ford' ? car.make = 'Jiga' : car.make
+// //     }
+// // });
+
+// const make = allCar.flatMap(make => make.make)
+// console.log(make);
+// // console.log(result);
+
