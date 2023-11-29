@@ -724,23 +724,171 @@
 // console.log(customer.getBalance()); // 19750
 // console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 
-const shopStone = {
-   stones: [
-      { name: 'Emerald', price: 1300, quantity: 4 },
-      { name: 'Diamond', price: 2700, quantity: 3 },
-      { name: 'Sapphire', price: 1400, quantity: 7 },
-      { name: 'Ruby', price: 800, quantity: 2 },
-   ],
-   calcTotalPrice(stoneName) {
-      const foundStone = this.stones.find(stone => stone.name === stoneName);
+// const shopStone = {
+//    stones: [
+//       { name: 'Emerald', price: 1300, quantity: 4 },
+//       { name: 'Diamond', price: 2700, quantity: 3 },
+//       { name: 'Sapphire', price: 1400, quantity: 7 },
+//       { name: 'Ruby', price: 800, quantity: 2 },
+//    ],
+//    calcTotalPrice(stoneName) {
+//       const foundStone = this.stones.find(stone => stone.name === stoneName);
 
-      if (!foundStone) return 0;
+//       if (!foundStone) return 0;
 
-      return foundStone.price * foundStone.quantity;
-   },
-}; 
+//       return foundStone.price * foundStone.quantity;
+//    },
+// };
 
-console.log(shopStone.calcTotalPrice('Emerald'));
-console.log(shopStone.calcTotalPrice('Diamond'));
-console.log(shopStone.calcTotalPrice('Sapphire'));
-console.log(shopStone.calcTotalPrice('Ruby'));
+// console.log(shopStone.calcTotalPrice('Emerald'));
+// console.log(shopStone.calcTotalPrice('Diamond'));
+// console.log(shopStone.calcTotalPrice('Sapphire'));
+// console.log(shopStone.calcTotalPrice('Ruby'));
+
+
+
+// const obj = {
+//    name: 'Alex',
+//    age: 16,
+
+//    sayThis() {
+//       console.log(this.name);
+//    }
+// }
+
+// // obj.sayThis();
+
+
+// function meet(onSuccess) {
+//    if (true) {
+//       console.log('Hello what\'s your name?');
+//       obj.sayThis();
+//    }
+// }
+
+// meet(obj.sayThis);
+
+// obj.sayThis()
+
+// const obj2 = obj.sayThis;
+
+// obj2();
+ 
+
+// // Створення об'єкта
+// var myObject = {
+//   // Властивість об'єкта
+//   property1: "Значення властивості",
+  
+//   // Метод об'єкта
+//    method1() {
+//     console.log("Це метод об'єкта");
+//   }
+// };
+
+// // Виклик методу об'єкта
+// myObject.method1(); // Виведе: Це метод об'єкта
+
+
+// function saySomething(onResult) {
+//    console.log('Something');
+//    onResult();
+// }
+
+// saySomething(obj.sayThis)
+
+
+// function sayThis() {
+//    console.log(this);
+// }
+
+// const sayThis2 = () =>{
+//    console.log(this);
+// }
+
+
+
+// sayThis();
+// sayThis2();
+
+// const account = {
+//    balance: 1000,
+
+//    sayThis() {
+//       const arrowFn = () => {
+//          console.log(this);
+//       }
+//       arrowFn();
+//    }
+// }
+
+// account.sayThis();
+
+// const showThis = function () {
+//    console.log(this);
+// }
+
+// const obj = {
+//    name: 'Alex',
+//    age: 16,
+// }
+
+// showThis.call(obj)
+
+// const animal = {
+//    legs: 4,
+// }
+
+// const dog = Object.create(animal);
+
+// dog.name = 'Sharik'
+// dog.age = 6
+// dog.legs = 4;
+
+// for (const key in dog) {
+//    if (dog.hasOwnProperty(key)) {
+//       console.log(key);
+      
+//    }
+
+   // console.log(key);
+   
+   // if (Object.hasOwnProperty.call(object, key)) {
+   //    const element = object[key];
+      
+   // }
+// }
+
+
+// console.log(dog);
+
+const customer = {
+  username: "Mango",
+  balance: 24000,
+  discount: 0.1,
+  orders: ["Burger", "Pizza", "Salad"],
+  // Change code below this line
+  getBalance() {
+    return this.balance;
+  },
+  getDiscount() {
+    return this.discount;
+  },
+  setDiscount(value) {
+    this.discount = value;
+  },
+  getOrders() {
+    return this.orders;
+  },
+  addOrder(cost, order) {
+    this.balance -= cost - cost * this.discount;
+    this.orders.push(order);
+  },
+  // Change code above this line
+};
+
+customer.setDiscount(0.15);
+console.log(customer.getDiscount()); // 0.15
+customer.addOrder(5000, "Steak");
+console.log(customer.getBalance()); // 19750
+console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
