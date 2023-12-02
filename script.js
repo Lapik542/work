@@ -862,33 +862,175 @@
 
 // console.log(dog);
 
-const customer = {
-  username: "Mango",
-  balance: 24000,
-  discount: 0.1,
-  orders: ["Burger", "Pizza", "Salad"],
-  // Change code below this line
-  getBalance() {
-    return this.balance;
-  },
-  getDiscount() {
-    return this.discount;
-  },
-  setDiscount(value) {
-    this.discount = value;
-  },
-  getOrders() {
-    return this.orders;
-  },
-  addOrder(cost, order) {
-    this.balance -= cost - cost * this.discount;
-    this.orders.push(order);
-  },
-  // Change code above this line
-};
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+//   // Change code above this line
+// };
 
-customer.setDiscount(0.15);
-console.log(customer.getDiscount()); // 0.15
-customer.addOrder(5000, "Steak");
-console.log(customer.getBalance()); // 19750
-console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
+
+  
+
+// class User {
+//   _email;
+
+//   constructor(email) {
+//     this._email = email;
+//   }
+
+//   get email() {
+//     return this._email;
+//   }
+
+//   set email(newEmail) {
+//     this._email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   static blacklistedEmails = [];
+
+//   constructor({ email, access }) {
+//     super(email);
+//     this.access = access;
+//   }
+
+//   blacklist(email) {
+//     Admin.blacklistedEmails.push(email);
+//   }
+
+//   isBlacklisted(email) {
+//     return Admin.blacklistedEmails.includes(email);
+//   }
+// }
+
+// // Приклад використання:
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(Admin.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+
+// class Car {
+//    speed = 0;
+//    model = '';
+//    color = '#000000';
+
+//    #key = '';
+
+//    get key() {
+//       return this.#key
+//    }
+
+//    set key(newKey) {
+//       if (this.#key) {
+//          console.error('You have already have a key');
+//          return;
+//       }
+
+//       this.#key = newKey;
+//    }
+
+//    constructor(speed, model, color, key) {
+//       this.speed = speed;
+//       this.model = model;
+//       this.color = color;
+
+//       this.#key = key;
+//    }
+
+//    start() {
+//       if (this.#key) {
+//          console.log(`${this.model} Started.`);
+//       } else {
+//          console.log(`${this.model} Started. Had Speed: ${this.speed}`);
+//       }
+//    }
+
+//    stop() {
+//       console.log(`${this.model} Stoped with color ${this.color}`);
+//    }
+// }
+
+// const bmw = new Car(200, 'BMW', 'Red');
+// const audi = new Car(300, 'AUDI', 'Blue');
+// const tesla = new Car(50, 'Tesla', 'Black', 'sdfq-wgda-3465');
+
+// // console.log(bmw);
+// // console.log(audi);
+// // console.log(tesla);
+
+
+// audi.key = 'NEW KEY';
+
+// console.log(audi.key)
+
+
+
+// // bmw.start();
+// // audi.start();
+// // tesla.stop();
+// // bmw.stop();
+
+class Storage {
+   #items = [];
+
+   constructor(items) {
+      this.#items = items;
+   }
+
+   getItems() {
+      return this.#items;
+   }
+
+   addItem(newItem) {
+      this.#items.push(newItem)
+   }
+
+   removeItem(itemToRemove) {
+      this.#items = this.#items.filter(product => product !== itemToRemove)
+   }
+}
+
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
