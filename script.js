@@ -690,13 +690,61 @@
 // // console.log(result);
 
 
-const users = [
-    { id: 1, online: true},
-    { id: 1, online: false},
-    { id: 1, online: true},
-];
+// const users = [
+//     { id: 1, online: true},
+//     { id: 1, online: false},
+//     { id: 1, online: true},
+// ];
 
-const result = users.filter((user) => user.online);
+// const result = users.filter((user) => user.online);
 
-console.log(result);
+// console.log(result);
 
+
+
+
+
+
+
+
+
+// const options = [
+//     { label: 'red', color: '#F44336' },
+//     { label: 'green', color: '#4CAF50' },
+//     { label: 'blue', color: '#2196F3' },
+//     { label: 'gray', color: '#607D8B' },
+//     { label: 'pink', color: '#E91E63' },
+//     { label: 'indigo', color: '#3F5185' },
+// ];
+
+// const colorPickerContainer = document.querySelector('.color-picker');
+
+// // const colorElements = options.map((option) => {
+// //     const colorElement = document.createElement('div');
+// //     colorElement.className = 'color-picker__option';
+// //     colorElement.title = option.label;
+// //     colorElement.style.backgroundColor = option.color;
+
+// //     return colorElement;
+// // })
+
+// // colorPickerContainer.append(...colorElements)
+
+
+// const colorsHTML = options.reduce((html, option) => html + `
+//     <div
+//     title=${option.label}
+//     style='background-color: ${option.color};'
+//     class='color-picker__option'
+//     >
+//     </div>
+// `, '')
+
+// colorPickerContainer.insertAdjacentHTML('beforeend', colorsHTML)
+// console.log(colorsHTML);
+
+const list = document.querySelector('#categories')
+const childeList = list.children;
+console.log(`Number of categories: ${childeList.length}`);
+const animals = list.childNodes;
+console.log(`Category: ${animals}`);
