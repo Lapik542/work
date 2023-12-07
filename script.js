@@ -648,6 +648,10 @@
 // );
 
 
+// function sayHello(greeting) {
+//   console.log(`${greeting}, ${this.name}!`);
+// }
+
 // const number = [5, 10, 15, 20, 25, 30];
 
 // let total = 0;
@@ -689,19 +693,30 @@
 // console.log(make);
 // // console.log(result);
 
-
-// const users = [
-//     { id: 1, online: true},
-//     { id: 1, online: false},
-//     { id: 1, online: true},
-// ];
-
-// const result = users.filter((user) => user.online);
-
-// console.log(result);
-
-
-
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return balance;
+//   },
+//   getDiscount() {
+//     return discount;
+//   },
+//   setDiscount(value) {
+//     discount = value;
+//   },
+//   getOrders() {
+//     return orders;
+//   },
+//   addOrder(cost, order) {
+//     balance -= cost - cost * discount;
+//     orders.push(order);
+//   },
+//   // Change code above this line
+// };
 
 
 
@@ -743,8 +758,324 @@
 // colorPickerContainer.insertAdjacentHTML('beforeend', colorsHTML)
 // console.log(colorsHTML);
 
-const list = document.querySelector('#categories')
-const childeList = list.children;
-console.log(`Number of categories: ${childeList.length}`);
-const animals = list.childNodes;
-console.log(`Category: ${animals}`);
+// const list = document.querySelector('#categories')
+// const childeList = list.children;
+// console.log(`Number of categories: ${childeList.length}`);
+// const animals = list.childNodes;
+// console.log(`Category: ${animals}`);
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+// const shopStone = {
+//    stones: [
+//       { name: 'Emerald', price: 1300, quantity: 4 },
+//       { name: 'Diamond', price: 2700, quantity: 3 },
+//       { name: 'Sapphire', price: 1400, quantity: 7 },
+//       { name: 'Ruby', price: 800, quantity: 2 },
+//    ],
+//    calcTotalPrice(stoneName) {
+//       const foundStone = this.stones.find(stone => stone.name === stoneName);
+
+//       if (!foundStone) return 0;
+
+//       return foundStone.price * foundStone.quantity;
+//    },
+// };
+
+// console.log(shopStone.calcTotalPrice('Emerald'));
+// console.log(shopStone.calcTotalPrice('Diamond'));
+// console.log(shopStone.calcTotalPrice('Sapphire'));
+// console.log(shopStone.calcTotalPrice('Ruby'));
+
+
+
+// const obj = {
+//    name: 'Alex',
+//    age: 16,
+
+//    sayThis() {
+//       console.log(this.name);
+//    }
+// }
+
+// // obj.sayThis();
+
+
+// function meet(onSuccess) {
+//    if (true) {
+//       console.log('Hello what\'s your name?');
+//       obj.sayThis();
+//    }
+// }
+
+// meet(obj.sayThis);
+
+// obj.sayThis()
+
+// const obj2 = obj.sayThis;
+
+// obj2();
+ 
+
+// // Створення об'єкта
+// var myObject = {
+//   // Властивість об'єкта
+//   property1: "Значення властивості",
+  
+//   // Метод об'єкта
+//    method1() {
+//     console.log("Це метод об'єкта");
+//   }
+// };
+
+// // Виклик методу об'єкта
+// myObject.method1(); // Виведе: Це метод об'єкта
+
+
+// function saySomething(onResult) {
+//    console.log('Something');
+//    onResult();
+// }
+
+// saySomething(obj.sayThis)
+
+
+// function sayThis() {
+//    console.log(this);
+// }
+
+// const sayThis2 = () =>{
+//    console.log(this);
+// }
+
+
+
+// sayThis();
+// sayThis2();
+
+// const account = {
+//    balance: 1000,
+
+//    sayThis() {
+//       const arrowFn = () => {
+//          console.log(this);
+//       }
+//       arrowFn();
+//    }
+// }
+
+// account.sayThis();
+
+// const showThis = function () {
+//    console.log(this);
+// }
+
+// const obj = {
+//    name: 'Alex',
+//    age: 16,
+// }
+
+// showThis.call(obj)
+
+// const animal = {
+//    legs: 4,
+// }
+
+// const dog = Object.create(animal);
+
+// dog.name = 'Sharik'
+// dog.age = 6
+// dog.legs = 4;
+
+// for (const key in dog) {
+//    if (dog.hasOwnProperty(key)) {
+//       console.log(key);
+      
+//    }
+
+   // console.log(key);
+   
+   // if (Object.hasOwnProperty.call(object, key)) {
+   //    const element = object[key];
+      
+   // }
+// }
+
+
+// console.log(dog);
+
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+//   // Change code above this line
+// };
+
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
+
+  
+
+// class User {
+//   _email;
+
+//   constructor(email) {
+//     this._email = email;
+//   }
+
+//   get email() {
+//     return this._email;
+//   }
+
+//   set email(newEmail) {
+//     this._email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   static blacklistedEmails = [];
+
+//   constructor({ email, access }) {
+//     super(email);
+//     this.access = access;
+//   }
+
+//   blacklist(email) {
+//     Admin.blacklistedEmails.push(email);
+//   }
+
+//   isBlacklisted(email) {
+//     return Admin.blacklistedEmails.includes(email);
+//   }
+// }
+
+// // Приклад використання:
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(Admin.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+
+// class Car {
+//    speed = 0;
+//    model = '';
+//    color = '#000000';
+
+//    #key = '';
+
+//    get key() {
+//       return this.#key
+//    }
+
+//    set key(newKey) {
+//       if (this.#key) {
+//          console.error('You have already have a key');
+//          return;
+//       }
+
+//       this.#key = newKey;
+//    }
+
+//    constructor(speed, model, color, key) {
+//       this.speed = speed;
+//       this.model = model;
+//       this.color = color;
+
+//       this.#key = key;
+//    }
+
+//    start() {
+//       if (this.#key) {
+//          console.log(`${this.model} Started.`);
+//       } else {
+//          console.log(`${this.model} Started. Had Speed: ${this.speed}`);
+//       }
+//    }
+
+//    stop() {
+//       console.log(`${this.model} Stoped with color ${this.color}`);
+//    }
+// }
+
+// const bmw = new Car(200, 'BMW', 'Red');
+// const audi = new Car(300, 'AUDI', 'Blue');
+// const tesla = new Car(50, 'Tesla', 'Black', 'sdfq-wgda-3465');
+
+// // console.log(bmw);
+// // console.log(audi);
+// // console.log(tesla);
+
+
+// audi.key = 'NEW KEY';
+
+// console.log(audi.key)
+
+
+
+// // bmw.start();
+// // audi.start();
+// // tesla.stop();
+// // bmw.stop();
+
+// class Storage {
+//    #items = [];
+
+//    constructor(items) {
+//       this.#items = items;
+//    }
+
+//    getItems() {
+//       return this.#items;
+//    }
+
+//    addItem(newItem) {
+//       this.#items.push(newItem)
+//    }
+
+//    removeItem(itemToRemove) {
+//       this.#items = this.#items.filter(product => product !== itemToRemove)
+//    }
+// }
+
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
