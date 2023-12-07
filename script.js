@@ -1145,12 +1145,39 @@
 //    gallery.append(liElement)
 // })
 
-const button = document.querySelector('.js-click');
-const box = document.querySelector('.js-box');
+// const button = document.querySelector('.js-click');
+// const box = document.querySelector('.js-box');
 
-button.addEventListener('mouseup', () => {
-   console.log('Changed');
-   box.style.backgroundColor = "green";
-   box.style.marginLeft = '80px';
-   box.style.transition = 'margin 3s' ;
-});
+// const handlerButtonClick = () => {
+//    box.style.backgroundColor = "green";
+//    box.style.marginLeft = '80px';
+//    box.style.transition = 'margin 2s ';
+// }
+
+// button.addEventListener('click', handlerButtonClick, {once: true});
+
+// const userName = document.querySelector('.js-user-name');
+// const button = document.querySelector('.js-button');
+
+// let username = '';
+
+// userName.addEventListener("input", (event) => {
+//    username = event.target.value;
+// });
+
+// button.addEventListener('click', () => {
+//    alert(`My name ${username}`);
+//    userName.value = '';
+//    username = '';
+// })
+
+const inputElement = document.querySelector('#name-input');
+const outputElement  = document.querySelector('#name-output');
+
+inputElement.addEventListener('input', (event) => {
+   if(inputElement.value.trim() === '') {
+      outputElement.textContent = 'Anonymous'
+   } else {
+      outputElement.textContent = inputElement.value;
+   }
+})
