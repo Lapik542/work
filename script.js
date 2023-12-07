@@ -1145,4 +1145,12 @@
 //    gallery.append(liElement)
 // })
 
+const button = document.querySelector('.js-click');
+const box = document.querySelector('.js-box');
 
+button.addEventListener('mouseup', () => {
+   console.log('Changed');
+   box.style.backgroundColor = "green";
+   box.style.marginLeft = '80px';
+   box.style.transition = 'margin 3s' ;
+});

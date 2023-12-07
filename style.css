@@ -12,3 +12,16 @@ body {
     width: 300px;
     height: 300px;
 }
+
+.button {
+    border: none;
+    cursor: grab;
+    width: 100px;
+    height: 30px;
+}
+
+.block {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
