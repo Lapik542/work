@@ -1080,22 +1080,69 @@
 // storage.removeItem("Prolonger");
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
+// Home Work
+// {1}
+// const list = document.querySelector('#categories');
+// const childeList = list.children;
+// console.log(`Number of categories: ${childeList.length}`);
 
-const list = document.querySelector('#categories');
-const childeList = list.children;
-console.log(`Number of categories: ${childeList.length}`);
+// const animals = list.querySelector('h2');
+// console.log(`Category: ${animals.textContent}`);
+// const elementAnimal = childeList[0].querySelectorAll('li');
+// console.log(`Elements: ${elementAnimal.length}`);
 
-const animals = list.querySelector('h2');
-console.log(`Category: ${animals.textContent}`);
-const elementAnimal = childeList[0].querySelectorAll('li');
-console.log(`Elements: ${elementAnimal.length}`);
+// const product = list.querySelectorAll('#categories>li>h2')
+// console.log(`Category: ${product[1].textContent}`);
+// const elementProduct = childeList[1].querySelectorAll('li')
+// console.log(`Elements: ${elementProduct.length}`);
 
-const product = list.querySelectorAll('#categories>li>h2')
-console.log(`Category: ${product[1].textContent}`);
-const elementProduct = childeList[1].querySelectorAll('li')
-console.log(`Elements: ${elementProduct.length}`);
+// const technologies = list.querySelectorAll('#categories>li>h2')
+// console.log(`Category: ${technologies[2].textContent}`);
+// const elementTechnologies = childeList[2].querySelectorAll('li')
+// console.log(`Elements: ${elementTechnologies.length}`);
 
-const technologies = list.querySelectorAll('#categories>li>h2')
-console.log(`Category: ${technologies[2].textContent}`);
-const elementTechnologies = childeList[2].querySelectorAll('li')
-console.log(`Elements: ${elementTechnologies.length}`);
+// {2}
+// const images = [
+// {
+// url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+// alt: 'White and Black Long Fur Cat',
+// },
+// {
+// url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+// alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+// },
+// {
+// url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+// alt: 'Group of Horses Running',
+// },
+// {
+// url:
+// 'https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+// alt: 'Elephant Beside on Baby Elephant',
+// },
+// {
+// url:
+// 'https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+// alt: 'Blue Geeen and Orange Parrot',
+// },
+// {
+// url:
+// 'https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+// alt: 'Zebras on Zebra',
+// },
+// ];
+
+// const gallery = document.querySelector('.gallery');
+
+// images.forEach((image) => {
+//    const liElement = document.createElement('li');
+//    const imgElement = document.createElement('img');
+//    imgElement.className = 'gallery-box';
+//    imgElement.alt = image.alt;
+//    imgElement.src = image.url;
+
+//    liElement.append(imgElement)
+//    gallery.append(liElement)
+// })
+
+
