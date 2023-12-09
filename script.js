@@ -1081,6 +1081,14 @@
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
+
+
+
+
+
+
+
+
 // Home Work
 // {1}
 // const list = document.querySelector('#categories');
@@ -1145,37 +1153,6 @@
 //    liElement.append(imgElement)
 //    gallery.append(liElement)
 // })
-
-// const button = document.querySelector('.js-click');
-// const box = document.querySelector('.js-box');
-
-// const handlerButtonClick = () => {
-//    box.style.backgroundColor = "green";
-//    box.style.marginLeft = '80px';
-//    box.style.transition = 'margin 2s ';
-// }
-
-// button.addEventListener('click', handlerButtonClick, {once: true});
-
-// const userName = document.querySelector('.js-user-name');
-// const button = document.querySelector('.js-button');
-
-// let username = '';
-
-// userName.addEventListener("input", (event) => {
-//    username = event.target.value;
-// });
-
-// button.addEventListener('click', () => {
-//    alert(`My name ${username}`);
-//    userName.value = '';
-//    username = '';
-// })
-
-
-
-
-
 
 
 // {1}
@@ -1252,3 +1229,6 @@
 //    }
 // })
 // {4}
+const form = document.querySelector('.login-form');
+
+form.
