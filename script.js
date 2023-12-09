@@ -718,6 +718,51 @@
 //   // Change code above this line
 // };
 
+
+
+
+
+
+// const options = [
+//     { label: 'red', color: '#F44336' },
+//     { label: 'green', color: '#4CAF50' },
+//     { label: 'blue', color: '#2196F3' },
+//     { label: 'gray', color: '#607D8B' },
+//     { label: 'pink', color: '#E91E63' },
+//     { label: 'indigo', color: '#3F5185' },
+// ];
+
+// const colorPickerContainer = document.querySelector('.color-picker');
+
+// // const colorElements = options.map((option) => {
+// //     const colorElement = document.createElement('div');
+// //     colorElement.className = 'color-picker__option';
+// //     colorElement.title = option.label;
+// //     colorElement.style.backgroundColor = option.color;
+
+// //     return colorElement;
+// // })
+
+// // colorPickerContainer.append(...colorElements)
+
+
+// const colorsHTML = options.reduce((html, option) => html + `
+//     <div
+//     title=${option.label}
+//     style='background-color: ${option.color};'
+//     class='color-picker__option'
+//     >
+//     </div>
+// `, '')
+
+// colorPickerContainer.insertAdjacentHTML('beforeend', colorsHTML)
+// console.log(colorsHTML);
+
+// const list = document.querySelector('#categories')
+// const childeList = list.children;
+// console.log(`Number of categories: ${childeList.length}`);
+// const animals = list.childNodes;
+// console.log(`Category: ${animals}`);
 // customer.setDiscount(0.15);
 // console.log(customer.getDiscount()); // 0.15
 // customer.addOrder(5000, "Steak");
@@ -1034,3 +1079,176 @@
 // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 // storage.removeItem("Prolonger");
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+// Home Work
+// {1}
+// const list = document.querySelector('#categories');
+// const childeList = list.children;
+// console.log(`Number of categories: ${childeList.length}`);
+
+// const animals = list.querySelector('h2');
+// console.log(`Category: ${animals.textContent}`);
+// const elementAnimal = childeList[0].querySelectorAll('li');
+// console.log(`Elements: ${elementAnimal.length}`);
+
+// const product = list.querySelectorAll('#categories>li>h2')
+// console.log(`Category: ${product[1].textContent}`);
+// const elementProduct = childeList[1].querySelectorAll('li')
+// console.log(`Elements: ${elementProduct.length}`);
+
+// const technologies = list.querySelectorAll('#categories>li>h2')
+// console.log(`Category: ${technologies[2].textContent}`);
+// const elementTechnologies = childeList[2].querySelectorAll('li')
+// console.log(`Elements: ${elementTechnologies.length}`);
+
+// {2}
+// const images = [
+// {
+// url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+// alt: 'White and Black Long Fur Cat',
+// },
+// {
+// url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+// alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+// },
+// {
+// url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+// alt: 'Group of Horses Running',
+// },
+// {
+// url:
+// 'https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+// alt: 'Elephant Beside on Baby Elephant',
+// },
+// {
+// url:
+// 'https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+// alt: 'Blue Geeen and Orange Parrot',
+// },
+// {
+// url:
+// 'https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+// alt: 'Zebras on Zebra',
+// },
+// ];
+
+// const gallery = document.querySelector('.gallery');
+
+// images.forEach((image) => {
+//    const liElement = document.createElement('li');
+//    const imgElement = document.createElement('img');
+//    imgElement.className = 'gallery-box';
+//    imgElement.alt = image.alt;
+//    imgElement.src = image.url;
+
+//    liElement.append(imgElement)
+//    gallery.append(liElement)
+// })
+
+// const button = document.querySelector('.js-click');
+// const box = document.querySelector('.js-box');
+
+// const handlerButtonClick = () => {
+//    box.style.backgroundColor = "green";
+//    box.style.marginLeft = '80px';
+//    box.style.transition = 'margin 2s ';
+// }
+
+// button.addEventListener('click', handlerButtonClick, {once: true});
+
+// const userName = document.querySelector('.js-user-name');
+// const button = document.querySelector('.js-button');
+
+// let username = '';
+
+// userName.addEventListener("input", (event) => {
+//    username = event.target.value;
+// });
+
+// button.addEventListener('click', () => {
+//    alert(`My name ${username}`);
+//    userName.value = '';
+//    username = '';
+// })
+
+
+
+
+
+
+
+// {1}
+// const list = document.querySelector('#categories');
+// const childeList = list.children;
+// console.log(`Number of categories: ${childeList.length}`);
+
+// const animals = list.querySelector('h2');
+// console.log(`Category: ${animals.textContent}`);
+// const elementAnimal = childeList[0].querySelectorAll('li');
+// console.log(`Elements: ${elementAnimal.length}`);
+
+// const product = list.querySelectorAll('#categories>li>h2')
+// console.log(`Category: ${product[1].textContent}`);
+// const elementProduct = childeList[1].querySelectorAll('li')
+// console.log(`Elements: ${elementProduct.length}`);
+
+// const technologies = list.querySelectorAll('#categories>li>h2')
+// console.log(`Category: ${technologies[2].textContent}`);
+// const elementTechnologies = childeList[2].querySelectorAll('li')
+// console.log(`Elements: ${elementTechnologies.length}`);
+// {2}
+// const images = [
+// {
+// url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+// alt: 'White and Black Long Fur Cat',
+// },
+// {
+// url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+// alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+// },
+// {
+// url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+// alt: 'Group of Horses Running',
+// },
+// {
+// url:
+// 'https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+// alt: 'Elephant Beside on Baby Elephant',
+// },
+// {
+// url:
+// 'https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+// alt: 'Blue Geeen and Orange Parrot',
+// },
+// {
+// url:
+// 'https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+// alt: 'Zebras on Zebra',
+// },
+// ];
+
+// const gallery = document.querySelector('.gallery');
+
+// images.forEach((image) => {
+//    const liElement = document.createElement('li');
+//    const imgElement = document.createElement('img');
+//    imgElement.className = 'gallery-box';
+//    imgElement.alt = image.alt;
+//    imgElement.src = image.url;
+
+//    liElement.append(imgElement)
+//    gallery.append(liElement)
+// })
+// {3}
+// const inputElement = document.querySelector('#name-input');
+// const outputElement  = document.querySelector('#name-output');
+
+// inputElement.addEventListener('input', () => {
+//    if(inputElement.value.trim() === '') {
+//       outputElement.textContent = 'Anonymous'
+//    } else {
+//       outputElement.textContent = inputElement.value;
+//    }
+// })
+// {4}
