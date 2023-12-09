@@ -1229,6 +1229,38 @@
 //    }
 // })
 // {4}
-const form = document.querySelector('.login-form');
+// const form = document.querySelector('.login-form');
+// const email = document.getElementById("email");
+// const password = document.getElementById("password");
 
-form.
+// form.addEventListener('submit', (event) => {
+//    event.preventDefault();
+//    const data = new FormData(event.target)
+
+//    data.forEach((value, key) => {
+//       alert(value, key)
+//    })
+// })
+
+
+
+const form = document.querySelector('.login-form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const emailValue = email.value.trim();
+  const passwordValue = password.value.trim();
+
+  if (emailValue === '' || passwordValue === '') {
+    alert('All form fields must be filled in');
+  } else {
+    const formData = {
+      email: emailValue,
+      password: passwordValue
+    };
+
+    console.log(formData);
+
+    this.reset();
+  }
+});
