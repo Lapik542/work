@@ -1265,7 +1265,6 @@
 //   }
 // });
 
-
 new Calendar({
   id: "#color-calendar",
   calendarSize: "small",
