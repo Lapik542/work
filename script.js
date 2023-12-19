@@ -1154,152 +1154,46 @@
 //    gallery.append(liElement)
 // })
 
-
-// {1}
-// const list = document.querySelector('#categories');
-// const childeList = list.children;
-// console.log(`Number of categories: ${childeList.length}`);
-
-// const animals = list.querySelector('h2');
-// console.log(`Category: ${animals.textContent}`);
-// const elementAnimal = childeList[0].querySelectorAll('li');
-// console.log(`Elements: ${elementAnimal.length}`);
-
-// const product = list.querySelectorAll('#categories>li>h2')
-// console.log(`Category: ${product[1].textContent}`);
-// const elementProduct = childeList[1].querySelectorAll('li')
-// console.log(`Elements: ${elementProduct.length}`);
-
-// const technologies = list.querySelectorAll('#categories>li>h2')
-// console.log(`Category: ${technologies[2].textContent}`);
-// const elementTechnologies = childeList[2].querySelectorAll('li')
-// console.log(`Elements: ${elementTechnologies.length}`);
-// {2}
-// const images = [
-// {
-// url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-// alt: 'White and Black Long Fur Cat',
-// },
-// {
-// url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-// alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
-// },
-// {
-// url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-// alt: 'Group of Horses Running',
-// },
-// {
-// url:
-// 'https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-// alt: 'Elephant Beside on Baby Elephant',
-// },
-// {
-// url:
-// 'https://images.pexels.com/photos/37833/rainbow-lorikeet-parrots-australia-rainbow-37833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-// alt: 'Blue Geeen and Orange Parrot',
-// },
-// {
-// url:
-// 'https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-// alt: 'Zebras on Zebra',
-// },
-// ];
-
-// const gallery = document.querySelector('.gallery');
-
-// images.forEach((image) => {
-//    const liElement = document.createElement('li');
-//    const imgElement = document.createElement('img');
-//    imgElement.className = 'gallery-box';
-//    imgElement.alt = image.alt;
-//    imgElement.src = image.url;
-
-//    liElement.append(imgElement)
-//    gallery.append(liElement)
-// })
-// {3}
-// const inputElement = document.querySelector('#name-input');
-// const outputElement  = document.querySelector('#name-output');
-
-// inputElement.addEventListener('input', () => {
-//    if(inputElement.value.trim() === '') {
-//       outputElement.textContent = 'Anonymous'
-//    } else {
-//       outputElement.textContent = inputElement.value;
-//    }
-// })
-// {4}
-// document.querySelector(".login-form").addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   const formData = new FormData(event.target);
-//   if (isFormValid(formData)) {
-//     const formDataObject = {};
-//     formData.forEach((value, key) => {
-//       formDataObject[key] = value;
-//     });
-//     console.log(formDataObject);
-//     event.target.reset();
-//   } else {
-//     alert('All form fields must be filled in.');
-//   }
-// });
-// const isFormValid = (formData) => {
-//   for (const pair of formData.entries()) {
-//     if (!pair[1]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// };
-// {5}
-// const getRandomHexColor = () => `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
-// document.querySelector(".change-color").addEventListener("click", () => {
-//   const body = document.body;
-//   const colorSpan = document.querySelector(".color");
-//   const randomHexColor = getRandomHexColor();
-//   body.style.backgroundColor = randomHexColor;
-//   colorSpan.textContent = randomHexColor;
-// });
-// {6}
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, '0')}`;
-}
-
-const createBoxes = (amount) => {
-  const boxesContainer = document.getElementById('boxes');
-  const baseSize = 30;
-
-  for (let i = 0; i < amount; i++) {
-    const box = document.createElement('div');
-    const size = baseSize + i * 10;
-
-    box.style.width = `${size}px`;
-    box.style.height = `${size}px`;
-    box.style.backgroundColor = getRandomHexColor();
-
-    boxesContainer.appendChild(box);
+new Calendar({
+  id: "#color-calendar",
+  theme: "glass",
+  // border: "5px solid black",
+  weekdayType: "long-upper",
+  monthDisplayType: "long",
+  // headerColor: "yellow",
+  // headerBackgroundColor: "black",
+  calendarSize: "small",
+  layoutModifiers: ["month-left-align"],
+  eventsData: [
+    {
+      id: 1,
+      name: "French class",
+      start: "2020-12-17T06:00:00",
+      end: "2020-12-18T20:30:00"
+    },
+    {
+      id: 2,
+      name: "Blockchain 101",
+      start: "2020-12-20T10:00:00",
+      end: "2020-12-20T11:30:00"
+    },
+    {
+      id: 3,
+      name: "Cheese 101",
+      start: "2020-12-01T10:00:00",
+      end: "2020-12-02T11:30:00"
+    },
+    {
+      id: 4,
+      name: "Cheese 101",
+      start: "2020-12-01T10:00:00",
+      end: "2020-12-02T11:30:00"
+    }
+  ],
+  dateChanged: (currentDate, events) => {
+    console.log("date change", currentDate, events);
+  },
+  monthChanged: (currentDate, events) => {
+    console.log("month change", currentDate, events);
   }
-};
-
-const destroyBoxes = () => {
-  const boxesContainer = document.getElementById('boxes');
-  boxesContainer.innerHTML = '';
-};
-
-document.querySelector('[data-create]').addEventListener('click', () => {
-  const inputAmount = document.querySelector('input');
-  const amount = Number(inputAmount.value);
-
-  if (amount >= 1 && amount <= 100) {
-    createBoxes(amount);
-    inputAmount.value = '';
-  } else {
-    alert('Please enter a number between 1 and 100.');
-  }
-});
-
-document.querySelector('[data-destroy]').addEventListener('click', () => {
-  destroyBoxes();
 });
