@@ -2,16 +2,16 @@ body {
     background-color: tan;
 }
 
-/* .gallery {
+.gallery {
     list-style: none;
     display: flex;
     gap: 10px;
-} */
+}
 
-/* .gallery-box {
+.gallery-box {
     width: 200px;
     height: 200px;
-} */
+}
 
 .button {
     border: none;
@@ -25,11 +25,3 @@ body {
     height: 20px;
     background-color: red;
 }
-
-
-
-/* .js-user-name {
-    border-color: brown;
-    color: white;
-    background-color: black;
-}  */

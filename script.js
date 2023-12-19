@@ -1229,38 +1229,77 @@
 //    }
 // })
 // {4}
-// const form = document.querySelector('.login-form');
-// const email = document.getElementById("email");
-// const password = document.getElementById("password");
+// document.querySelector(".login-form").addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const formData = new FormData(event.target);
+//   if (isFormValid(formData)) {
+//     const formDataObject = {};
+//     formData.forEach((value, key) => {
+//       formDataObject[key] = value;
+//     });
+//     console.log(formDataObject);
+//     event.target.reset();
+//   } else {
+//     alert('All form fields must be filled in.');
+//   }
+// });
+// const isFormValid = (formData) => {
+//   for (const pair of formData.entries()) {
+//     if (!pair[1]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+// {5}
+// const getRandomHexColor = () => `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+// document.querySelector(".change-color").addEventListener("click", () => {
+//   const body = document.body;
+//   const colorSpan = document.querySelector(".color");
+//   const randomHexColor = getRandomHexColor();
+//   body.style.backgroundColor = randomHexColor;
+//   colorSpan.textContent = randomHexColor;
+// });
+// {6}
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, '0')}`;
+}
 
-// form.addEventListener('submit', (event) => {
-//    event.preventDefault();
-//    const data = new FormData(event.target)
+const createBoxes = (amount) => {
+  const boxesContainer = document.getElementById('boxes');
+  const baseSize = 30;
 
-//    data.forEach((value, key) => {
-//       alert(value, key)
-//    })
-// })
+  for (let i = 0; i < amount; i++) {
+    const box = document.createElement('div');
+    const size = baseSize + i * 10;
 
+    box.style.width = `${size}px`;
+    box.style.height = `${size}px`;
+    box.style.backgroundColor = getRandomHexColor();
 
-
-const form = document.querySelector('.login-form');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-
-  if (emailValue === '' || passwordValue === '') {
-    alert('All form fields must be filled in');
-  } else {
-    const formData = {
-      email: emailValue,
-      password: passwordValue
-    };
-
-    console.log(formData);
-
-    this.reset();
+    boxesContainer.appendChild(box);
   }
+};
+
+const destroyBoxes = () => {
+  const boxesContainer = document.getElementById('boxes');
+  boxesContainer.innerHTML = '';
+};
+
+document.querySelector('[data-create]').addEventListener('click', () => {
+  const inputAmount = document.querySelector('input');
+  const amount = Number(inputAmount.value);
+
+  if (amount >= 1 && amount <= 100) {
+    createBoxes(amount);
+    inputAmount.value = '';
+  } else {
+    alert('Please enter a number between 1 and 100.');
+  }
+});
+
+document.querySelector('[data-destroy]').addEventListener('click', () => {
+  destroyBoxes();
 });
