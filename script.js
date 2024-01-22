@@ -1265,3 +1265,29 @@
 //   }
 // });
 
+const list = document.querySelector('.list');
+
+const getTodos = () => {
+  return fetch('https://jsonplaceholder.typicode.com/todos')
+              .then((responce) => {
+                if (!responce.ok)  {
+                  throw new Error('Something went wrong!')
+                }
+                return responce.json();
+              })
+}
+
+const showDefaultError = (error) => console.error(error.message);
+
+const renderTodos = (todos) => {
+  list.innerHTML = todos.reduce((html, todo) => html + `
+  <li>
+  <div>${todo.title}</div>
+  <div>${todo.completed ? 'Done' : 'In Progress'}</div>
+  </li>
+  `, '')
+}
+
+getTodos()
+.then(renderTodos)
+.catch(showDefaultError);
