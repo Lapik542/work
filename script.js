@@ -1267,27 +1267,17 @@
 
 const list = document.querySelector('.list');
 
-const getTodos = () => {
-  return fetch('https://jsonplaceholder.typicode.com/todos')
-              .then((responce) => {
-                if (!responce.ok)  {
-                  throw new Error('Something went wrong!')
-                }
-                return responce.json();
-              })
-}
+const url = new URL('https://pixabay.com/api/')
 
-const showDefaultError = (error) => console.error(error.message);
+url.searchParams.append('key', '42027351-38548a0814b7c6ae31d9c3419')
+url.searchParams.append('q', 'black moon')
 
-const renderTodos = (todos) => {
-  list.innerHTML = todos.reduce((html, todo) => html + `
-  <li>
-  <div>${todo.title}</div>
-  <div>${todo.completed ? 'Done' : 'In Progress'}</div>
-  </li>
-  `, '')
-}
+fetch(url)
+.then(response => response.json())
+.then(images => {
+  document.body.insertAdjacentHTML('beforeend', `
+  <img src='${images.hits[1].largeImageURL}' width='800'/>
+  `)
+  console.log(images);
+})
 
-getTodos()
-.then(renderTodos)
-.catch(showDefaultError);
